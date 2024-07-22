@@ -6,7 +6,106 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script defer src="./assets/js/index.js"></script>
-    <title>Document</title>
+    <title>Contact Forms</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <h1 class="head">Contact Forms</h1>
+      <p class="paragraph">
+        Please fill in your details and we'll send your order.
+      </p>
+      <form class="form">
+        <label class="form-label">
+          <span class="caption">Your name:</span>
+          <input
+            class="form-input"
+            name="user-first-name"
+            type="text"
+            required
+            autofocus
+            placeholder="First name"
+            minlength="2"
+            maxlength="32"
+            tabindex="1"
+            pattern="[A-Z][a-z]*"
+          />
+          <input
+            class="form-input"
+            name="user-last-name"
+            type="text"
+            required
+            placeholder="Last name"
+            minlength="2"
+            maxlength="60"
+            tabindex="2"
+            pattern="[A-Z][a-z]{1,30}(-[A-Z][a-z]{1,30})*"
+          />
+        </label>
+        <label class="form-label">
+          <span class="caption">Email:</span>
+          <input
+            class="input-email"
+            name="user-email"
+            type="email"
+            placeholder="your_mail@mail.com"
+            maxlength="64"
+            minlength="5"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+            required
+            tabindex="3"
+          />
+        </label>
+        <label class="form-label">
+          <span class="caption">Phone<span class="asterisk">*</span></span>
+          <div class="phone-group">
+            <input
+              type="tel"
+              class="form-input-phone"
+              name="user-phone-1"
+              tabindex="4"
+              pattern="[0-9]{3}"
+              placeholder="000"
+            />
+            <input
+              type="tel"
+              class="form-input-phone"
+              name="user-phone-2"
+              tabindex="4"
+              pattern="[0-9]{3}"
+              placeholder="000"
+            />
+            <input
+              type="tel"
+              class="form-input-phone"
+              name="user-phone-3"
+              tabindex="4"
+              pattern="[0-9]{4}"
+              placeholder="0000"
+            />
+          </div>
+        </label>
+        <label class="form-label">
+          <span class="caption"
+            >Message subject<span class="asterisk">*</span></span
+          >
+          <select class="form-select" name="select" size="1" tabindex="5">
+            <option value="other" selected>Other</option>
+            <option value="property">Property</option>
+            <option value="value">Value</option>
+          </select>
+        </label>
+        <label class="form-label">
+          <span class="caption">Message<span class="asterisk">*</span></span>
+          <textarea
+            name="message"
+            maxlength="100"
+            minlength="2"
+            tabindex="6"
+          ></textarea>
+        </label>
+        <div class="divider"></div>
+        <button class="submit-button" type="submit">Submit form</button>
+      </form>
+    </main>
+  </body>
 </html>
